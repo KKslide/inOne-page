@@ -1,0 +1,639 @@
+@charset "utf-8";
+body{font:12px/2 SimSun,"Microsoft Yahei",Arial,Helvetica,sans-serif,"宋体";-webkit-text-size-adjust:none;}
+a{ text-decoration:none; }
+ul,li,p,h1,h2,h3,h4,h5,dl,dt,dd,ol,body{ padding:0; margin:0;}
+ul,li{ list-style:none;}
+img{border:0;}
+input{ margin:0; padding:0; border-radius:0; border:0;}
+i,em{font-style:normal;}
+
+@import "base";
+
+$hoverColor:#fd9b24;
+body{min-width:960px;}
+%boxshadow{
+	box-shadow:1px 1px 2px 0 #ddd;background-color:#fff;
+}
+%clear{
+	zoom:1;
+	&:after{content:".";display:block;height:0;overflow:hidden;clear:both;visibility:hidden;}
+}
+.wrapper{
+	position:relative;max-width:1200px;margin:0 auto;@extend %clear;
+}
+.wrap{overflow:hidden;background-color:#F3F3F3;}
+.top{
+	height:60px;line-height:60px;border-bottom:6px solid $hoverColor;
+}
+.main{
+	@extend %clear;
+	.mainL{width:66.66667%;float:left;padding-right:4px;@include box-sizing;}
+	.mainR{
+		width:33.33333%;padding-left:8px;float:right;@include box-sizing;
+		.tit{
+			padding-left:19px;
+		}
+	}
+}
+/*收藏*/
+.tips{
+	color:#b4b4b4; float:left;
+	a{
+		position:relative;font-size:12px;color:#b4b4b4;padding-left:10px;margin-left:10px;@include transition(color);
+		&:first-child{
+			margin-left:0;
+			&:before{display:none;}
+		}
+		&:before{content:"";position:absolute;width:0;height:80%;top:10%;left:0;border-left:1px solid #b4b4b4;}
+		&:hover{
+			color:$hoverColor;
+		}
+	}
+}
+/*搜索*/
+.search{
+	position:relative;overflow:hidden;float:right;margin-top:13px;margin-right:40px;width:240px;height:33px;border:1px solid $hoverColor;border-radius:50px;
+	.keywords{display:block;width:100%;font-size:12px;line-height:normal;padding:10px 45px 10px 10px;outline:0;color:#b4b4b4;@include box-sizing;border-radius:50px 0 0 50px;}
+	.submit{position:absolute;right:-1px;top:-1px;height:35px; outline:0;width:38px;background:url(../images/ico1.png) no-repeat left center;overflow:hidden;cursor:pointer;border-radius:0 50px 50px 0;border-top:1px solid $hoverColor;border-bottom:1px solid $hoverColor;border-right:1px solid $hoverColor;}
+}
+/*导航*/
+.nav{
+	@extend %boxshadow;
+	.logo{
+		position:absolute;left:8px;top:13px;width:164px;
+		img{display:block;width:100%;}
+	}
+	ul{
+		margin:0 18.3333%;overflow:hidden;height:105px;padding-left:10px;
+		li{
+			line-height:1.3;font-size:18px;margin-right:10px;color:#000;padding:0 2.6316%;float:left;text-align:center;
+			&:first-child{margin-right:25px;}
+			a{display:block;color:#000;padding:34px 0 33px;}
+			i{display:block;font-size:12px;}
+			&.cur,&:hover{
+				color:#fff;background-color:$hoverColor;
+				a{color:#fff;}
+			}
+		}
+	}
+}
+/*登录*/
+.login{
+	position:absolute;right:40px;top:31px;background-color:$hoverColor;padding:0 15px;
+	a{font-size:18px;color:#fff;height:43px;line-height:43px;padding:0 6px;}
+}
+/*幻灯片*/
+#slider{
+	position:relative;height:500px;overflow:hidden;margin-bottom:10px;
+	ul{height:100%;overflow:hidden;}
+	li{
+		a{display:block;height:100%;@include fixbackground;}
+	}
+	.slider_nav{
+		position:absolute;bottom:25px;left:0;width:100%;height:10px;line-height:10px;text-align:center;vertical-align:top;
+		a{
+			display:inline-block;width:30px;height:10px;float:none;border-radius:10px;background-color:#fff;@include transition(background-color);margin:0 5px;cursor:pointer;
+			&.cur{background-color:$hoverColor;}
+		}
+	}
+}
+/*通用小标题*/
+.tit{
+	font-size:18px;color:#000;line-height:1.4;margin:22px 0 18px;
+	&.cur{
+		color:#646464;
+		a{color:#646464;}
+		i{color:$hoverColor;}
+	}
+	i{
+		position:relative;padding:0 3px;display:inline-block;border-bottom:3px solid $hoverColor;margin-bottom:7px;
+		&:before{content:"";position:absolute;left:50%;top:100%;width:14px;height:7px;margin:2px 0 0 -7px;background:url(../images/ico2.png) no-repeat center top;}
+	}
+}
+/*游戏推荐*/
+.gameRec{
+	margin-left:-12px;@extend %clear;
+	li{
+		width:33.3333%;float:left;line-height:1.5;
+		>div{margin-left:12px;@extend %boxshadow;}
+		.gameRec_t{
+			display:block;
+			em,i{display:block;overflow:hidden;@include translateZ(0);}
+			h2{font-size:24px;color:#646464;font-weight:normal;margin:5px 0 0 15px;height:36px;overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+			p{font-size:14px;color:#9b9a9a;margin-left:15px;height:21px;overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+			i{
+				padding-top:47.193878%;@include fixbackground;@include scale(1);@include transition(transform);
+			}
+			&:hover{
+				i{@include scale(1.05);}
+			}
+		}
+		.gameRec_b{
+			font-size:12px;overflow:hidden;color:#a09f9f;padding:15px 12px 12px 15px;
+			em{
+				margin-top:3px;background-size:19px;
+				&:first-child{margin-right:10px;}
+			}
+			a{
+				float:right;width:86px;height:25px;line-height:25px;overflow:hidden;text-align:center;color:#a09f9f;border:1px solid #cccaca;border-radius:5px;
+				&:hover{
+					color:#fff;background-color:$hoverColor;border:1px solid $hoverColor;
+				}
+			}
+		}
+	}
+}
+.t_tips{
+	font-size:12px;color:#000;display:inline-block;margin-left:20px;
+	a{
+		position:relative;display:inline-block;padding-left:10px;margin-left:20px;
+		&:before{content:"";width:0;height:0;position:absolute;left:0;top:50%;margin-top:-3px;border-width:3px;border-style:solid;}
+		&.rx{
+			&:before{border-color:#F90403;}
+		}
+		&.qx{
+			&:before{border-color:#19FCA3;}
+		}
+		&.sn{
+			&:before{border-color:#FA95D9;}
+		}
+		&.cl{
+			&:before{border-color:#FF9A24;}
+		}
+	}
+}
+.ico_ios,.ico_android,.ico_online{
+	display:inline-block;padding-left:21px;line-height:2;font-size:12px;background-repeat:no-repeat;background-position:left center;color:#a09f9f;
+}
+.ico_ios{
+	background-image:url(../images/ico3.png);
+}
+.ico_android{
+	background-image:url(../images/ico4.png);
+}
+.ico_online{
+	background-image:url(../images/ico5.png);height:24px;overflow:hidden;
+}
+.t_more,.t_other{
+	font:12px/2 SimSun,"Arial Narrow",HELVETICA;border-radius:5px;line-height:1.9;width:56px;overflow:hidden;text-align:center;float:right;margin:2px 10px 0 5px;@include box-sizing;color:#969696;border:1px solid #CBCBCB;
+	&:hover{
+		color:#fff;background-color:$hoverColor;border:1px solid $hoverColor;
+	}
+}
+
+/*热门游戏*/
+.gameHot{
+	margin:0 0 -18px -2.765%;@extend %clear;
+	li{
+		width:33.33333%;float:left;margin-bottom:18px;line-height:1.9;
+		>div{
+			position:relative;margin-left:8.07%;padding:12px 15px 8px 15px;@extend %boxshadow;overflow:hidden;
+			&:hover{
+				.gameHot_code{z-index:1;@include opacity(100);visibility:visible;}
+			}
+			&:before{content:"";width:5px;height:5px;position:absolute;right:6px;top:6px;border-width:3px;border-style:solid;border-color:#fff;}
+			&.rx{
+				&:before{border-color:#F90403;}
+			}
+			&.qx{
+				&:before{border-color:#19FCA3;}
+			}
+			&.sn{
+				&:before{border-color:#FA95D9;}
+			}
+			&.cl{
+				&:before{border-color:#FF9A24;}
+			}
+			>p{font-size:12px;color:#828282;max-height:44px;overflow:hidden;}
+		}
+		i{display:block;width:96px;height:96px;border-radius:10px;overflow:hidden;@include fixbackground;float:left;margin:0 7.85% 4px 0;}
+		h3{font-size:16px;font-weight:normal;color:#646464;margin-top:5px;height:30px;overflow:hidden;}
+		
+		.qx_tp{
+			height:22px;
+		}
+		.gameHot_b{
+			clear:both;
+			em{
+				background-size:auto 16px;padding-left:18px;
+				&:first-child{margin-right:5px;}
+			}
+			.ico_online{float:right;margin-right:0;}
+		}
+		.gameHot_code{
+			i{border-radius:0;overflow:visible;}
+		}
+	}
+}
+.gameHot_code{
+	z-index:-1;@include opacity(0);visibility:hidden;@include transition(opacity);position:absolute;left:0;top:0;width:100%;height:100%;padding:14px 15px 7px 15px;@include box-sizing;@include bgcolor(#fd9b24,0.9);
+	i{
+		position:relative;display:block;width:96px;height:96px;@include fixbackground;float:left;margin:0 17px 4px 0;border-radius:0;overflow:visible;
+		&:before{content:"扫描二维码下载";font-size:12px;position:absolute;left:0;top:100%;width:100%;text-align:center;color:#fff;}
+	}
+	p{
+		position:absolute;width:91px;right:22px;top:50%;@include translateY(-50%);
+		a{
+			display:block;height:26px;line-height:26px;border:1px solid #fff;border-radius:5px;text-align:center;color:#fff;margin:10px 0;
+			&:hover{
+				background-color:#FFD3A4;color:#bb6416;
+			}
+		}
+	}
+}
+/*最新开服*/
+.zxkf{
+	text-align:center;@extend %boxshadow;
+	ul{
+		padding:8px 6px 5px 10px;
+		li{
+			border-bottom:1px dashed #B4B4B4;padding:0 12px 0 15px;
+			a{
+				position:relative;padding:10px 0 9px 36px;font-size:12px;color:#646464;display:block;overflow:hidden;background-position:right center;background-repeat:no-repeat;background-image:url(../images/ico6.png);@include transition(all);
+				&:hover{
+					color:$hoverColor;background-image:url(../images/ico6_h.png);
+				}
+				&:before{
+					content:"爆";position:absolute;left:0;top:10px;width:23px;height:23px;line-height:23px;text-align:center;overflow:hidden;background-color:#fa2e2e;color:#fff;font-size:13px;
+				}
+			}
+			i{display:block;height:24px;overflow:hidden;float:left;width:28%;vertical-align:top;text-align:left;}
+			em{display:block;height:24px;overflow:hidden;float:left;width:20%;vertical-align:top;}
+			&.z_new{
+				a{
+					&:before{content:"新";background-color:#fe7e01;}
+				}
+			}
+			&.z_c{
+				a{
+					&:before{content:"畅";background-color:#2ebf01;}
+				}
+			}
+		}
+	}
+}
+.z_page{
+	text-align:center;vertical-align:top;font-size:12px;line-height:1.9;padding-bottom:5px;
+	&.l_page{
+		font-size:14px;margin-top:24px;
+	}
+	a{
+		display:inline-block;padding:0 8px;vertical-align:top;color:#646464;@include transition(all);
+		&:hover,&.cur{color:$hoverColor;}
+		&.z_prev,&.z_next,&.z_first,&.z_end{
+			border:1px solid #969696;border-radius:5px;font-family:"SimSun","songti","宋体";
+			&:hover{border:1px solid $hoverColor;background-color:$hoverColor;color:#fff;}
+		}
+		&.z_prev,&.z_first{margin-left:7px;}
+		&.z_next,&.z_end{margin-right:7px;}
+	}
+}
+/*最新资讯*/
+.zxzx{
+	position:relative;@extend %boxshadow;padding-right:159px;
+	.zx_img{
+		position:absolute;right:0;top:0;width:159px;height:100%;@include fixbackground;
+	}
+}
+.arc_nav{
+	overflow:hidden;background-color:$hoverColor;padding:4px 70px 0 0;
+	li{
+		float:left;width:20%;text-align:center;height:65px;line-height:65px;color:#fff;font-size:16px;cursor:pointer;
+		&.cur{background-color:#fff;color:#000;}
+	}
+}
+.arc_c{
+	overflow:hidden;
+	ul{
+		display:none;overflow:hidden;margin:14px 70px 13px 35px;
+		&.cur{display:block;}
+		li{
+			overflow:hidden;height:28px;font-size:14px;line-height:2;margin-bottom:6px;
+			&:first-child{
+				font-size:24px;text-align:center;height:48px;
+				a{
+					max-width:80%;font-weight:bold;color:#646464;position:relative;display:inline-block;
+					&:before{content:"";position:absolute;left:100%;margin-left:5px;top:0;width:34px;height:21px;background:url(../images/ico8.jpg) no-repeat;}
+				}
+			}
+			a{
+				display:block;color:#646464;@include transition(color);
+				&:hover{
+					color:$hoverColor;
+				}
+				i{float:right;}
+			}
+		}
+	}
+}
+/*福利礼包*/
+.gift{
+	margin-bottom:-8px;
+	li{
+		@extend %boxshadow;margin-bottom:8px;line-height:1.6;
+		a{
+			display:block;color:#646464;padding:12px 23px 12px 10px;padding-right:40px;max-height:50px;overflow:hidden;background-image:url(../images/ico7.png);background-position:96% center;background-repeat:no-repeat;@include transition(background-image);
+			&:hover{background-image:url(../images/ico7_h.png);}
+		}
+		i{display:block;float:left;width:50px;height:50px;margin-right:10px;border-radius:10px;@include fixbackground;}
+		h4{font-size:14px;font-weight:normal;margin-top:4px;height:22px;overflow:hidden;}
+		p{font-size:12px;color:$hoverColor;}
+		span{margin-right:15px;}
+		em{color:#646464;display:inline-block;}
+	}
+}
+/*快捷通道*/
+$sArr:(9:s_fcm,10:s_reg,11:s_edit,12:s_cz,13:s_bdsj,14:s_bdyx,15:s_xgmm,16:s_mmzh);
+.service{
+	@extend %boxshadow;overflow:hidden;font:14px/24px SimSun,"Arial Narrow",HELVETICA;color:#969696; 
+	.service_l{
+		width:61.08%;float:left;
+		li{
+			width:25%;float:left;
+			a{
+				display:block;color:#969696;padding:34px 0;@include transition(color);text-align:center;border-right:1px solid #E6E6E6;border-bottom:1px solid #E6E6E6;
+				&:hover{color:$hoverColor;}
+			}
+			i{display:inline-block;padding-left:50px;height:39px;line-height:39px;background-position:left center;background-repeat:no-repeat;@include transition(background-image);}
+			@each $i, $val in $sArr {
+				&.#{$val}{
+					i{background-image:url(../images/ico#{$i}.png);}
+					a{
+						&:hover{
+							i{background-image:url(../images/ico#{$i}_h.png);}
+						}
+					}
+				}
+			}	
+		}
+	}
+	.service_r{
+		position:relative;width:38.92%;float:right;padding-left:19.334%;@include box-sizing;
+		li{
+			color:#969696;font:12px/2 SimSun,"Arial Narrow",HELVETICA;border-bottom:1px solid #E6E6E6;text-align:center;height:53px;line-height:53px;overflow:hidden;
+			&:first-child{
+				position:absolute;left:0;top:0;font-size:16px;line-height:2;width:49.677%;height:215px;border-right:1px solid #E6E6E6;
+				a{display:block;height:100%;}
+				i{display:block;margin-top:40px;padding-top:113px;background:url(../images/ico17.png) no-repeat center top;}
+			}
+			a{display:block;font-size:16px;color:#969696;}
+		}
+	}
+}
+/*新闻资讯*/
+.bannertop{
+	display:block;padding-top:400px;@include fixbackground;
+}
+.gameNews{
+	li{
+		@extend %boxshadow;margin-bottom:10px;
+		a{
+			position:relative;display:block;padding:9px 180px 17px 14px;color:#646464;
+			&:before{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border:1px solid $hoverColor;@include opacity(0);@include transition(opacity);}
+			&:hover{
+				color:$hoverColor;
+				&:before{@include opacity(100);}
+			}
+		}
+		i{display:block;float:left;width:74px;margin-right:15px;padding-top:74px;border-radius:18px;@include fixbackground;}
+		h3{
+			font-size:14px;font-weight:normal;margin:4px 0 3px;height:24px;overflow:hidden;@include transition(color);
+			&:before{content:attr(data-type);padding:2px 5px;border-radius:5px;font-size:12px;color:#fff;background-color:$hoverColor;}
+		}
+		em{color:#969696;position:absolute;right:10px;top:10px;}
+		p{font-size:12px;color:#969696;line-height:1.6;height:38px;overflow:hidden;}
+	}
+}
+/*火爆活动*/
+.hbhd{
+	li{
+		@extend %boxshadow;padding:6px;margin-bottom:10px;
+		a{display:block;@include fixbackground;padding-top:31.8421%;}
+	}
+}
+/*内容页*/
+.arc{
+	@extend %boxshadow;padding:0 8px;
+	h1{
+		font-size:28px;color:#646464;text-align:center;font-weight:normal;padding:18px 0 12px;
+		i{
+			display:inline-block;position:relative;
+			em{
+				position:absolute;top:50%;right:100%;font-size:12px;width:100px;text-align:right;margin-top:-11px;
+				&:before{content:attr(data-type);padding:2px 5px;vertical-align:top;border-radius:5px;color:#fff;background-color:$hoverColor;margin-right:5px;}
+			}
+			
+		}
+	}
+	.a_content{
+		font-size:14px;color:#000;overflow:hidden;margin:30px 30px 10px;line-height:1.7;
+		p{margin:20px 0;}
+		img{display:block;max-width:100%;height:auto;margin:0 auto;}
+	}
+}
+.rwt_share{
+	text-align:center;font-size:12px;color:#969696;border-bottom:1px solid #E6E6E6;padding-bottom:7px;
+	a{margin:0 5px;cursor:pointer;vertical-align:top;}
+	i{margin-left:120px;display:inline-block;vertical-align:top;}
+}
+/*礼包*/
+.gameGift{
+	@extend %clear;margin-left:-10px;
+	li{
+		width:33.3333%;float:left;
+		a{
+			display:block;margin-left:10px;line-height:1.6;@extend %boxshadow;text-align:center;
+			h4{font-weight:normal;font-size:18px;color:#646464;margin:8px 0 3px;}
+			p{color:$hoverColor;font-size:14px;}
+			em{
+				display:block;@include translateZ(0);overflow:hidden;
+				i{display:block;padding-top:64.09266%;@include fixbackground;@include scale(1);@include transition(transform);}
+			}
+			span{
+				width: 101px;display:inline-block;height: 29px;font-size:14px;line-height: 29px;color: #a09f9f;border: 1px solid #CBCBCB;border-radius: 5px;margin:12px 0 13px;@include transition(all);
+				&:hover{
+					color:#fff;background-color:$hoverColor;border: 1px solid $hoverColor;
+				}
+			}
+			&:hover{
+				em{
+					i{@include scale(1.05);}
+				}
+			}
+		}
+	}
+}
+.gameSelect{
+	@extend %boxshadow;padding:20px 13px 5px;margin-bottom:10px;
+	li{
+		margin-bottom:5px;
+		.gs{
+			position:relative;padding-left:140px;color:#969696;font-size:14px;
+			span{
+				position:absolute;left:0;top:50%;margin-top:-14px;width:140px;overflow:hidden;text-align:right;@include box-sizing;line-height:1.8;font-size:16px;height:28px;overflow:hidden;padding-right:5px;
+				a{float:right;background-color:$hoverColor;font-size:14px;color:#fff;margin:0 0 0 8px;padding:0 14px;}
+			}
+			a{
+				color:#969696;cursor:pointer;display:inline-block;margin:2px 0;padding:0 10px;@include transition(all);
+				&:hover{
+					background-color:$hoverColor;color:#fff;
+				}
+			}
+		}
+	}
+}
+.allGift{
+	@extend %clear;
+	li{
+		overflow:hidden;position:relative;padding:18px 120px 16px 16px;@extend %boxshadow;margin-bottom:10px;
+		.icoimg{display:block;float:left;width:95px;padding-top:95px;margin-right:25px;border-radius:20px;@include fixbackground;}
+		.agtit{font-size:14px;color:#000;font-weight:normal;height:28px;overflow:hidden;}
+		.agdesc{font-size:12px;color:#646464;line-height:1.5;height:18px;overflow:hidden;}
+		.agbtn{
+			position:absolute;right:35px;top:50%;width:67px;height:26px;margin-top:-13px;font-size:14px;line-height:26px;color:#969696;border:1px solid #969696;border-radius:5px;text-align:center;@include transition(all);
+			&:hover{
+				color:#fff;background-color:$hoverColor;border:1px solid $hoverColor;
+			}
+		}
+		.agtime{
+			color:#969696;font-size:12px;margin-top:15px;line-height:1.5;
+			span{
+				position:relative;display:inline-block;width:220px;height:10px;margin-left:20px;background-color:#C8C8C8;
+				&:before{content:"剩余"attr(data-has);position:absolute;left:100%;top:50%;width:100%;height:18px;margin:-9px 0 0 10px;}
+			}
+			em{position:absolute;left:0;top:0;height:100%;background-color:$hoverColor;max-width:100%;}
+		}
+	}
+}
+/*游戏大全*/
+.yxdq{
+	.gameSelect{
+		margin:20px 0 24px;padding:20px 13px 10px;
+		li{
+			.gs{
+				padding-left:170px;
+				span{
+					font-size:18px;width:170px;
+					a{margin:0 0 0 20px;padding:0 15px;}
+				}
+				a{
+					padding:0 15px;line-height:1.8;
+				}
+			}
+			.zm{
+				font-size:16px;
+				a{
+					padding:0 13px;
+				}
+			}
+		}
+	}
+}
+.gameList{
+	@extend %clear;margin-left:-20px;
+	li{
+		width:50%;float:left;margin-bottom:20px;
+		.gl_c{
+			overflow:hidden;position:relative;@extend %boxshadow;margin-left:20px;@include fixbackground;
+		}
+		.gl_r{
+			text-align:center;line-height:1.5;width:223px;float:right;padding:16px 0 0 15px;color:#fff;@include box-sizing;@include bgcolor(#000,0.7);
+		}
+		.gl_rt{
+			margin-bottom:22px;text-align:left;
+			.glr_img{
+				float:left;width:35.426%;padding-top:35.426%;border-radius:20px;@include fixbackground;margin-right:5.83%;
+			}
+			h3{color:#fff;font-size:24px;font-weight:normal;}
+			.ico_android, .ico_ios{
+				color:#fff;
+				&:first-child{margin-right:20px;}
+			}
+			.ico_ios{
+				background-image:url(../images/ico19.png);
+			}
+			.ico_android{
+				background-image:url(../images/ico18.png);
+			}
+			p{font-size:12px;color:#fff;line-height:1.4;}
+		}
+		.gl_rdesc{
+			clear:both;font-size:14px;text-align:left;line-height:1.4;
+		}
+		.gl_rbtn{
+			color:#fff;display:inline-block;width:86px;font-size:12px;line-height:2.1;text-align:center;border:1px solid #cccaca;border-radius:5px;margin:26px 7px 16px;cursor:pointer;@include transition(all);
+			&:hover{
+				border:1px solid $hoverColor;background-color:$hoverColor;
+			}
+		}
+		.gameHot_code{
+			@include bgcolor($hoverColor,0.8);
+			&.cur{z-index:1;visibility:visible;@include opacity(100);}
+			i{
+				width:120px;height:120px;position:absolute;left:38px;top:50%;margin:-70px 0 0;
+				&:before{font-size:15px;}
+			}
+			p{
+				width:120px;left:190px;margin-left:0;
+				a{width:120px;height:35px;line-height:35px;margin:17px 0;font-size:17px;}
+			}
+		}
+	}
+}
+/*底部*/
+.footer{
+	text-align:center;line-height:2;font-size:12px;color:#ccc;background-color:#4a4a4a;padding:32px 0;font-weight:lighter;margin-top:45px;
+	.foot{max-width:600px;margin:0 auto;overflow:hidden;}
+	a{
+		color:#ccc;margin:0 10px;@include transition(color);
+		&:hover{color:$hoverColor;}
+	}
+	.f_logo{
+		width:166px;float:left;
+		img{display:block;width:100%;}
+	}
+}
+.phone{display:none!important;}
+@include media-max-width(1200px){
+	.wrapper{margin:0 10px;}
+	.login{right:20px;}
+	.nav{
+		ul{
+			margin:0 14% 0 18.3333%;
+			li{padding:0 2%;}
+		}
+	}
+	#slider{
+		height:313px;
+	}
+	.gameHot{
+		li{
+			>div{
+				padding:12px 10px 8px;
+			}
+		}
+	}
+	.ico_online{max-width:60px;}
+	.gameHot_code{
+		padding:14px 10px 7px;
+		p{width:35%;left:110px;margin-left:5%;}
+	}
+	.arc_c{
+		ul{margin:14px 40px 13px 35px;}
+	}
+	.bannertop{padding-top:300px;}
+}
+@include media-max-width(800px){
+	//.pc{display:none!important;} 
+	.phone{display:block!important;}
+}
+@include let_ie8{
+
+}
+
+
+
+
+
+
+

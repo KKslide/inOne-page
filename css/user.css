@@ -1,0 +1,164 @@
+@charset "UTF-8";
+body { -webkit-touch-callout: none; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; text-size-adjust: none; -webkit-tap-highlight-color: transparent; font-family: -apple-system,Helvetica Neue,Roboto,Segoe UI,sans-serif; text-rendering: optimizeLegibility; -webkit-backface-visibility: hidden; -webkit-user-drag: none; -ms-content-zooming: none; }
+
+body, h1, h2, h3, h4, h5, p, ul, li, dl, dt, dd { margin: 0; padding: 0; }
+
+body, button, input, select, textarea { font-family:  \5B8B\4F53,\5FAE\8F6F\96C5\9ED1; }
+
+a { text-decoration: none; outline: 1px solid transparent; }
+
+a, img { -webkit-touch-callout: none; }
+
+li { list-style: none; }
+
+img { display: block; border: 0 none; max-width: 100%; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+button { -webkit-appearance: none; }
+
+#__bs_notify__ { width: 100% !important; font-size: 0.2em !important; }
+
+body { min-width: 1200px; background-color: #fff; }
+
+.pl10 { padding-left: 10px !important; }
+
+.keyword { color: #ff9900; }
+
+.ground-button { margin-left: 63px; width: 242px; text-align: center; }
+
+.button--user { display: inline-block; margin: 0 7px; width: 90px; height: 29px; font-size: 12px; color: #666666; text-align: center; cursor: pointer; border: 1px solid #cecece; border-radius: 15px; background-color: #ffffff; }
+.button__pack { display: inline-block; margin-left: 14px; height: 22px; line-height: 22px; width: 84px; color: #ffffff; font-size: 12px; border-radius: 3px; text-align: center; background-color: #fe9b23; }
+
+.form { box-sizing: border-box; }
+.form--login { position: absolute; top: 54px; right: 60px; padding: 16px 20px; width: 354px; height: 384px; background-color: #fff; }
+.form--reg { float: left; position: relative; padding-left: 42px; padding-right: 42px; width: 384px; }
+.form--reg:before { content: ''; position: absolute; right: 0; border-left: 1px solid #e1e1e1; height: 505px; }
+.form--reg label.error { top: -18px; }
+.form--user { margin-left: 100px; padding-top: 14px; }
+.form--user label.error { top: -25px; }
+.form__box { margin-left: auto; margin-right: auto; width: 260px; }
+.form__row { position: relative; }
+.form__row--login { margin-bottom: 13px; }
+.form__row--login:nth-of-type(3) { margin-bottom: 20px; height: 17px; }
+.form__row--login:nth-of-type(3):after { content: ''; display: table; clear: both; }
+.form__row--reg { margin-bottom: 19px; }
+.form__row--user { margin-bottom: 15px; padding-left: 83px; line-height: 31px; color: #666666; }
+.form__row--text { height: 34px; line-height: 34px; }
+.form__label { position: absolute; width: 40px; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; text-indent: -9999px; cursor: pointer; }
+.form__label--icon-user { background-image: url(../images/icon_user.png); }
+.form__label--icon-pwd { background-image: url(../images/icon_pwd.png); }
+.form__label--user { background-image: url(../images/icon-user.png); }
+.form__label--user { background-image: url(../images/icon-user.png); }
+.form__label--pwd { background-image: url(../images/icon-pwd.png); }
+.form__label--name { background-image: url(../images/icon-name.png); }
+.form__label--id { background-image: url(../images/icon-id.png); }
+.form__label--code { background-image: url(../images/icon-code.png); }
+.form__label--men { margin-right: 15px; }
+.form__label-auto { float: left; padding-left: 20px; height: 17px; line-height: 17px; font-size: 12px; color: #666; background-position: 0 50%; background-repeat: no-repeat; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; }
+.form__label-auto[data-state="no"] { background-image: url(../images/icon-no_auto.png); }
+.form__label-auto[data-state="auto"] { background-image: url(../images/icon-auto.png); }
+.form__label-auto a { color: #666; }
+.form__input { box-sizing: border-box; display: block; padding-left: 40px; padding-right: 10px; width: 100%; border: 1px solid #cecece; background-color: #fff; }
+.form__input--login { height: 34px; }
+.form__input--reg { height: 43px; }
+.form__input--code { width: 208px; height: 43px; }
+.form__input--user { padding-left: 5px; width: 240px; height: 31px; }
+.form__radio { margin-right: 5px; }
+.form .women { margin-left: 20px; }
+.form__checkbox { position: absolute; visibility: hidden; opacity: 0; }
+.form__recode { position: absolute; top: 7px; left: 212px; width: 60px; height: 28px; background-color: #999; }
+.form__link { float: right; font-size: 12px; color: #ff9900; }
+.form__link--reg { margin-top: 5px; }
+.form__button { display: block; width: 100%; border: none; color: #ffffff; cursor: pointer; }
+.form__button[disabled] { cursor: default; background-color: #dddddd; }
+.form__button--login { border-radius: 3px; height: 34px; font-size: 16px; text-align: center; background-color: #fe8500; }
+.form__button--reg { border-radius: 5px; width: 275px; height: 52px; line-height: 52px; font-size: 20px; background-color: #fe8500; }
+.form__birthday { height: 31px; }
+.form__other-login { margin-top: 74px; padding-top: 15px; border-top: 1px solid #cecece; }
+.form input.error { border: 1px solid red; }
+.form label.error { position: absolute; font-size: 12px; color: #ff0000; }
+
+/*登陆页面*/
+.login__page { background: url(../images/login__page.jpg) no-repeat 50% 50%; }
+.login__content { position: relative; margin-left: auto; margin-right: auto; width: 1200px; height: 532px; }
+.login__title { margin-bottom: 45px; font-size: 16px; color: #666666; font-weight: 400; }
+.login__link { display: inline-block; width: 25px; height: 25px; background-repeat: no-repeat; background-position: 50% 50%; }
+.login__link--qq { background-image: url(../images/login-qq.png); }
+.login__link--weibo { background-image: url(../images/login-weibo.png); }
+.login__link--weixin { background-image: url(../images/login-weixin.png); }
+
+.other-login { float: left; }
+
+/*注册页面*/
+.reg__page { padding-top: 30px; padding-bottom: 56px; background: url(../images/reg__bg.png) no-repeat 50% 50%; background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#feef8d), to(#f8ba00)); }
+.reg__box { box-sizing: border-box; margin-left: auto; margin-right: auto; padding-top: 27px; width: 644px; height: 556px; background-color: #fff; }
+.reg__box:after { content: ''; display: table; clear: both; }
+.reg__box .form__input { font-size: 14px; }
+.reg__box .form__label-auto { float: none; display: block; }
+.reg__box .login__link { display: block; margin-bottom: 4px; padding-left: 30px; width: auto; line-height: 25px; font-size: 12px; color: #666666; background-position: 0 50%; }
+.reg__box .other-login-title { padding-top: 40px; padding-bottom: 25px; }
+
+.other_login_box { box-sizing: border-box; float: right; padding-left: 38px; width: 258px; font-size: 12px; color: #666; }
+.other_login_box .keyword { text-decoration: underline; }
+.other_login_box .other_login_box_title { padding-top: 30px; }
+
+/*用户中心*/
+.user__page { margin-left: auto; margin-right: auto; padding-bottom: 72px; width: 1200px; }
+.user__head { margin: 30px 0; padding-left: 488px; height: 182px; background-color: #fff; box-shadow: 1px 1px 3px 0 #ddd; }
+.user__head:after { content: ''; display: table; clear: both; }
+.user__body { min-height: 690px; background-color: #fff; box-shadow: 1px 1px 3px 0 #ddd; }
+.user__info { float: left; margin-left: -488px; padding-top: 23px; width: 488px; }
+.user__info:after { content: ''; display: table; clear: both; }
+.user__box { display: none; }
+.user__box:first-child { display: block; }
+.user__box .title2 { padding-bottom: 5px; font-size: 16px; color: #666; font-weight: 400; border-bottom: 1px solid #e5e5e5; }
+.user__box .form__label { left: 0; width: 80px; text-indent: initial; white-space: nowrap; text-align: right; font-size: 12px; color: #666666; }
+.user__text { font-size: 12px; color: #666666; }
+.user__avatar { float: left; margin: 0 50px; width: 102px; text-align: center; }
+.user__img { display: block; margin-bottom: 5px; height: 102px; border-radius: 50%; background-color: #999; }
+.user__update-img { display: inline-block; width: 84px; height: 22px; line-height: 22px; font-size: 12px; color: #ffffff; border-radius: 10px; background-color: #fd9c24; }
+.user__about-text { font-size: 12px; color: #666666; }
+.user__about-text > p { line-height: 2.5; }
+.user__about-text .keyword { padding: 0 4px; }
+
+.switch { position: relative; padding-left: 252px; }
+.switch:after { content: ''; display: table; clear: both; }
+.switch__tabs { float: left; position: relative; margin-left: -252px; width: 252px; }
+.switch__tab { display: block; position: relative; padding-left: 110px; height: 62px; line-height: 62px; font-size: 16px; color: #666; border-bottom: 1px solid #e5e5e5; background-color: #fff; }
+.switch__tab:hover, .switch__tab.cur { color: #ffffff; z-index: 1; border-bottom: 1px solid #fd9c24; background-color: #fd9c24; }
+.switch__tab:before { content: ''; position: absolute; top: 0; left: 25px; width: 35px; height: 100%; background-position: 50% 50%; background-repeat: no-repeat; }
+.switch__tab--user:before { background-image: url(../images/user.png); }
+.switch__tab--user:hover:before, .switch__tab--user.cur:before { background-image: url(../images/user-hover.png); }
+.switch__tab--safe:before { background-image: url(../images/safe.png); }
+.switch__tab--safe:hover:before, .switch__tab--safe.cur:before { background-image: url(../images/safe-hover.png); }
+.switch__tab--password:before { background-image: url(../images/password.png); }
+.switch__tab--password:hover:before, .switch__tab--password.cur:before { background-image: url(../images/password-hover.png); }
+.switch__tab--pack:before { background-image: url(../images/pack.png); }
+.switch__tab--pack:hover:before, .switch__tab--pack.cur:before { background-image: url(../images/pack-hover.png); }
+.switch__content { position: relative; padding-top: 24px; padding-left: 30px; padding-right: 20px; min-height: 690px; }
+.switch__content:before { content: ''; position: absolute; top: 0; left: -1px; height: 100%; border-left: 1px solid #e5e5e5; }
+
+/*推荐游戏*/
+.recommend-game { position: relative; padding-top: 25px; padding-left: 60px; height: 130px; }
+.recommend-game:before { content: ''; position: absolute; top: 30px; left: 0; height: 128px; border-left: 1px solid #ccc; }
+.recommend-game__title { font-size: 15px; color: #000000; font-weight: 400; }
+.recommend-game__items { margin-top: 10px; }
+.recommend-game__items:after { content: ''; display: table; clear: both; }
+.recommend-game__item { box-sizing: border-box; float: left; padding-left: 88px; width: 33.3%; }
+.recommend-game__item:after { content: ''; display: table; clear: both; }
+.recommend-game__cover { float: left; margin-left: -88px; width: 74px; height: 74px; border-radius: 10px; background-color: #b4b4b4; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden; }
+.recommend-game__title2 { color: #666; font-size: 14px; line-height: 1.5; }
+.recommend-game__type { margin-bottom: 5px; font-size: 12px; color: #999; }
+.recommend-game__down { display: block; width: 76px; height: 22px; line-height: 22px; font-size: 12px; color: #cccccc; text-align: center; border: 1px solid #ccc; border-radius: 15px; }
+
+.page__title { margin-left: 50px; font-size: 30px; font-weight: 400; color: #666666; }
+.page__top { box-sizing: border-box; padding-top: 90px; margin-bottom: 5px; height: 156px; }
+.page__top .content { margin-left: auto; margin-right: auto; width: 1200px; }
+.page__top .logo-box { position: relative; float: left; padding-left: 170px; height: 59px; line-height: 68px; }
+.page__top .logo { position: absolute; top: 0; left: 0; height: 59px; }
+.page__top .logo:before { content: ''; position: absolute; right: -30px; bottom: 8px; height: 30px; border-left: 1px solid #ccc; }
+.page__footer { margin-left: auto; margin-right: auto; padding-top: 15px; width: 1200px; height: 90px; }
+.page__footer .copyright { float: left; padding-left: 20px; font-size: 12px; color: #666666; line-height: 1.8; }
+.page__footer .about-me { float: right; color: #666; font-size: 12px; }
+.page__footer .footer-link { padding: 0 5px; color: #666; }
+
+/*# sourceMappingURL=index.css.map */
